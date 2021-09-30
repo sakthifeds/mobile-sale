@@ -1,0 +1,57 @@
+<p>adminproduct works!</p>
+
+<div (click)=addNewProducts()>
+    Add new
+</div>
+
+<div (click)=viewProducts()>
+    View products
+</div>
+
+<div id="addNewProducts" *ngIf="this.showNewProducts">
+    <form #addNewProducts="ngForm" (ngSubmit) = "onSubmit(addNewProducts)">
+   
+        <label for="productName" class="form-label">Product Name</label>
+        <input type="text" name="productName" id="productName" ngModel>
+        <br>
+        <br>
+        <label for="brand" class="form-label">Brand</label>
+        <input type="text"  name="brand" id="brand" ngModel>
+  
+        <br>
+        <br>
+        <label for="price" class="form-label">price</label>
+        <input type="text" name="price" id="price" ngModel>
+        <br>
+        <br>
+       <label for="countInStock" class="form-label">Count In Stock</label>
+        <input type="email" name="countInStock" id="countInStock" ngModel>
+        <br>
+        <br>
+        <label for="Category" class="form-label">Category</label>
+        <input type="text" id="Category" name="category" ngModel>
+    
+
+        <label for="description" class="form-label">Description</label> -->
+      
+      <textarea id="description" name="description" rows="4" cols="50" ngModel>description
+         
+            </textarea>
+
+         <!-- <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="image" ngModel>  -->
+        <br>
+        <br>
+        <label for="image" class="form-label">Image</label>
+        <input type="text" id="image" name="image" ngModel>
+ 
+     <br>
+     <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    
+  </form> 
+</div>
+
+<div id="viewProducts" *ngIf="this.showViewProducts">
+    View NEw PRoducts
+</div>

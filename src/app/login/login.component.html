@@ -1,0 +1,23 @@
+<p>login works!</p>
+
+<div id="statuMessage" *ngIf="!this.loginStatus" style="margin-bottom:3%;">
+  <div>{{  this.messageToUser}} </div>
+  
+ </div>
+
+
+<div id="loginPageContainer">
+    <form #loginForm="ngForm" (ngSubmit) = "loginSubmit(loginForm)">
+   
+        <label for="email" class="form-label">Email ID</label>
+        <input type="text"  name="customerEmail"  id="email" ngModel>
+      
+        <label for="password" class="form-label">Password</label>
+        <input type="text"  name="customerPass" id="password" ngModel>
+  
+      <br>
+     
+      <button type="submit" class="btn btn-primary">Login</button>
+    
+  </form> 
+</div>
